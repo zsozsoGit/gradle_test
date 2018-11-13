@@ -4,7 +4,7 @@ CMD ["gradle"]
 
 ENV GRADLE_HOME /opt/gradle
 ENV GRADLE_VERSION 4.10.2
-RUN yum -y install wget
+RUN apt-get -y install wget
 ARG GRADLE_DOWNLOAD_SHA256=b49c6da1b2cb67a0caf6c7480630b51c70a11ca2016ff2f555eaeda863143a29
 RUN set -o errexit -o nounset \
 	&& echo "Downloading Gradle" \
